@@ -1,4 +1,4 @@
-Media Compress
+Photo Video Compress
 
 Summary
 =======
@@ -22,7 +22,7 @@ Works on Mac OS. Requires:
 Usage
 =====
 
-    python mcompress.py foldername
+    python pvcompress.py foldername
 
 - Input: a folder with images and videos
 
