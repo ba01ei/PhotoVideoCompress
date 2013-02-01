@@ -12,20 +12,22 @@ Requirements
 Works on Mac OS. Requires:
 
 - imagemagick, which can be installed through:
+
     sudo brew install imagemagick
 
 - HandBrakeCLI, which can be installed from:
+
     http://handbrake.fr/downloads2.php
 
 Usage
 =====
 
-- python mcompress.py foldername
+    python mcompress.py foldername
 
-Input: a folder with images and videos
+- Input: a folder with images and videos
 Output: a folder named foldername_small which contains compressed images and videos
 
-By default, this works with photos and videos from iPhone. Output videos are H.264 encoded with 2000kbps bitrate and 24 frame rate. Output images are JPGs with 80% quality and maximum side length of 1024. The settings can be modified in mcompress.py
+- By default, this works with photos and videos from iPhone. Output videos are H.264 encoded with 2000kbps bitrate and 24 frame rate. Output images are JPGs with 80% quality and maximum side length of 1024. The settings can be modified in mcompress.py
 
 
 License
