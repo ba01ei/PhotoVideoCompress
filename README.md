@@ -3,7 +3,7 @@ Media Compress
 Summary
 =======
 
-Compress image and video files and save 
+Compresses image and video files and saves them in a new folder
 
 
 Requirements
@@ -25,7 +25,8 @@ Usage
     python mcompress.py foldername
 
 - Input: a folder with images and videos
-Output: a folder named foldername_small which contains compressed images and videos
+
+- Output: a folder named foldername_small which contains compressed images and videos
 
 - By default, this works with photos and videos from iPhone. Output videos are H.264 encoded with 2000kbps bitrate and 24 frame rate. Output images are JPGs with 80% quality and maximum side length of 1024. The settings can be modified in mcompress.py
 
