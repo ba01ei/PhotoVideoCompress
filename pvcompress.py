@@ -41,6 +41,8 @@ for pic in pics:
     old_path = os.path.join(foldername, pic)
     noext = os.path.splitext(pic)[0]
     new_path = os.path.join(newfoldername, noext + "_small.jpg")
+    if os.path.isfile(new_path):
+        continue
     p = subprocess.Popen(["identify", old_path], stdout=subprocess.PIPE)
     info = p.stdout.read()
     retcode = p.wait()
@@ -65,6 +67,8 @@ for mov in movies:
     mp4 = noext + ("_%dkbps.mp4" % BIT_RATE)
     mov_path = os.path.join(foldername, mov)
     mp4_path = os.path.join(newfoldername, mp4)
+    if os.path.isfile(mp4_path):
+        continue
     cmd = "HandBrakeCLI -i \"%s\" -o \"%s\" -b %d -e x264 -r 24" % (mov_path, mp4_path, BIT_RATE)
     print(cmd)
     os.system(cmd)
