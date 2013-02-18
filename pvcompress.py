@@ -26,12 +26,18 @@ pics = []
 if len(foldername):
     foldername = os.path.abspath(foldername)
     newfoldername = os.path.normpath(foldername) + "_small"
-    os.system("mkdir -p \"%s\"" % newfoldername)
+    if not os.path.exists(newfoldername):
+        os.system("mkdir -p \"%s\"" % newfoldername)
 
     files = os.listdir(foldername)
     
     for f in files:
         fileName, fileExtension = os.path.splitext(f)
+        try:
+            if fileName.index(".")==0:
+                continue
+        except:
+            pass
         if fileExtension.lower() == INPUT_VIDEO_TYPE:
             movies.append(f)
         if fileExtension.lower() == INPUT_IMAGE_TYPE:
